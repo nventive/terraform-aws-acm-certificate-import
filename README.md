@@ -31,6 +31,7 @@ module "cert" {
   certificate_chain_base64 = filebase64("${path.module}/chain.pem")
 }
 ```
+
 ## Requirements
 
 | Name | Version |
@@ -38,21 +39,25 @@ module "cert" {
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.0 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 2.0 |
 | <a name="requirement_null"></a> [null](#requirement\_null) | >= 2.0 |
+
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | >= 2.0 |
+
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_this"></a> [this](#module\_this) | cloudposse/label/null | 0.25.0 |
+
 ## Resources
 
 | Name | Type |
 |------|------|
 | [aws_acm_certificate.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/acm_certificate) | resource |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -78,12 +83,14 @@ module "cert" {
 | <a name="input_stage"></a> [stage](#input\_stage) | ID element. Usually used to indicate role, e.g. 'prod', 'staging', 'source', 'build', 'test', 'deploy', 'release' | `string` | `null` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Additional tags (e.g. `{'BusinessUnit': 'XYZ'}`).<br>Neither the tag keys nor the tag values will be modified by this module. | `map(string)` | `{}` | no |
 | <a name="input_tenant"></a> [tenant](#input\_tenant) | ID element \_(Rarely used, not included by default)\_. A customer identifier, indicating who this instance of a resource is for | `string` | `null` | no |
+
 ## Outputs
 
 | Name | Description |
 |------|-------------|
 | <a name="output_arn"></a> [arn](#output\_arn) | The ARN of the certificate. |
 | <a name="output_id"></a> [id](#output\_id) | The ARN of the certificate. |
+
 ## Breaking Changes
 
 Please consult [BREAKING\_CHANGES.md](BREAKING\_CHANGES.md) for more information about version
